@@ -1,9 +1,5 @@
 # GEE Whittaker Smoothed LAI (2000-2024)
 
-## Usage
-
-GEE调用代码见：[LAI_WHITV016.js](./LAI_WHITV016.js)
-
 ## Highlights
 
 - 保护双生长季信号
@@ -11,6 +7,20 @@ GEE调用代码见：[LAI_WHITV016.js](./LAI_WHITV016.js)
 - 保护干旱响应信号
 
 - EBF质量提升
+
+## 数据
+- **500m, 8-day, 2000-2024**
+
+  https://code.earthengine.google.com/?asset=projects/gee-hydro/MODIS_Terra_LAI/MOD15A2H_V061_LAI_whittaker_v16
+
+  ```js
+  var col = ee.ImageCollection('projects/gee-hydro/MODIS_Terra_LAI/MOD15A2H_V061_LAI_whittaker_v16');
+  ```
+  全球被划分成了3*5 tiles, 需使用下面的代码进行拼接：[LAI_WHITV016.js](./LAI_WHITV016.js)。
+
+- **0.1deg, 8-day, 2000-2024**
+
+  稍后上传
 
 ## Reference
 
@@ -38,7 +48,6 @@ GEE调用代码见：[LAI_WHITV016.js](./LAI_WHITV016.js)
 ### 亚马逊
 
 ![](./images/亚马逊.png)
-
 
 ### 华北双生长季
 
