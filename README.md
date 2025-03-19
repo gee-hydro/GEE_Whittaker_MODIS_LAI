@@ -23,7 +23,11 @@ GEE调用代码见：[LAI_WHITV016.js](./LAI_WHITV016.js)
 
 ## 效果展示
 
+![](./images/LAI_products.png)
+
 ### 洪旱响应
+
+![](./images/methods.png)
 
 ![](./images/洪旱响应.png)
 
