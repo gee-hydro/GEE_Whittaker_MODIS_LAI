@@ -20,7 +20,7 @@ function tiles2col(imgcol, patterns, overlap_date_beg, old) {
     var ans = pkg_main.bands2imgcol(img, bandname_sm);
     ans = ee.ImageCollection(ans);
     if (i == patterns.length - 1 && overlap_date_beg) {
-      ans = ans.filterDate(overlap_date_beg, '2024-12-31');
+      ans = ans.filterDate(overlap_date_beg, '2025-12-31');
     }
     imgcol_sm = i === 0 ? ans : imgcol_sm.merge(ans);
   }
@@ -39,9 +39,9 @@ function tidy_lai(imgcol_sm) {
 /** MAIN SCRIPTS **************************************************************/
 var col = ee.ImageCollection("MODIS/061/MOD15A2H");
 
-var patterns = [2000, 2005, 2010, 2015, 2020];
+var patterns = [2000, 2005, 2010, 2015, 2020, 2021];
 var imgcol_v016 = ee.ImageCollection("projects/gee-hydro/MODIS_Terra_LAI/MOD15A2H_V061_LAI_whittaker_v16");
-var imgcol_lai_v016 = tiles2col(imgcol_v016, patterns, "2020-01-01");
+var imgcol_lai_v016 = tiles2col(imgcol_v016, patterns, "2025-01-01");
 
 
 exports = {
