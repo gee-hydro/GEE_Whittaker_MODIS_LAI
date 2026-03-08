@@ -1,5 +1,10 @@
 # GEE Whittaker Smoothed LAI (2000-2025)
 
+- MODIS LAI 2000-2025, [MODIS_LAI_WHITV016.js](MODIS_LAI_WHITV016.js), (update 2026-01-11)
+- VIIRS LAI 2020-2025, [VIIRS_LAI_WHITV001.js](VIIRS_LAI_WHITV001.js), (update 2026-03-08)
+
+> 2022.10之后MODIS LAI存在显著轨道漂移，MODIS LAI无法继续使用。
+
 ## Highlights
 
 - 保护双生长季信号
@@ -16,7 +21,7 @@
   ```js
   var col = ee.ImageCollection('projects/gee-hydro/MODIS_Terra_LAI/MOD15A2H_V061_LAI_whittaker_v16');
   ```
-  全球被划分成了3*5 tiles, 需使用下面的代码进行拼接：[LAI_WHITV016.js](./LAI_WHITV016.js)。
+  全球被划分成了3*5 tiles, 需使用下面的代码进行拼接：[MODIS_LAI_WHITV016.js](MODIS_LAI_WHITV016.js)。
 
 - **0.1deg, 8-day, 2000-2025**
 
