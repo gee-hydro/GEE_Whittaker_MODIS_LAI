@@ -22,7 +22,7 @@ function tiles2col(imgcol, patterns, overlap_date_beg, old) {
 
         // 
         if (i == patterns.length - 1 && overlap_date_beg) {
-            ans = ans.filterDate(overlap_date_beg, '2024-12-31');
+            ans = ans.filterDate(overlap_date_beg, '2025-12-31');
         }
         imgcol_sm = i === 0 ? ans : imgcol_sm.merge(ans);
     }
@@ -42,9 +42,9 @@ function tidy_lai(imgcol_sm) {
 // var patterns = [2000, 2005, 2010, 2015, 2020];
 // var imgcol_v01 = ee.ImageCollection("projects/gee-hydro/MODIS_Terra_LAI/MOD15A2H_V061_LAI_whittaker_v16");
 // var imgcol_lai_v01 = tiles2col(imgcol_v01, patterns, "2020-01-01");
-var patterns = [2020];
+var patterns = [2012, 2017, 2020];
 var tiles = ee.ImageCollection("projects/pml_evapotranspiration/MODIS/LAI/VNP15A2H_V002_LAI_whittaker_v01");
-var col_lai_v01 = tiles2col(tiles, patterns);
+var col_lai_v01 = tiles2col(tiles, patterns, "2022-01-01");
 
 exports = {
     LAI_SM_V01: col_lai_v01
